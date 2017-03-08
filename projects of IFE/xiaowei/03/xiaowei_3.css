@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.basic{
+	padding: 20px;
+	border: 1px solid #999;
+}
+
+#content{
+	padding: 20px;
+	margin: 20px;
+	background-color: #eee;
+	overflow: hidden;
+}
+
+#team{
+	width: 200px;
+	background-color: white;
+	float: left;
+}
+.logo{
+	width: 80px;
+	height: 80px;
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489566933&di=1d1d99289af57d5ca10ab960ac6e5a52&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.huliwusen.com%2Fbook_cover%2Fbd3602861.jpg);
+	background-size:100%;
+	background-color: #eee;
+
+}
+#team h5{
+	margin-left: 25px;
+
+
+}
+
+#per_logo_box{
+	width: 120px;
+	float: right;
+	background-color: white;
+
+}
+#per_logo_box .logo1{
+
+	margin-top: 20px;
+}
+
+#introduce{
+	float: left;
+	margin-left: 30px;
+	max-width: 950px;
+	background-color: white;
+}
+
+
+
+
+
+
