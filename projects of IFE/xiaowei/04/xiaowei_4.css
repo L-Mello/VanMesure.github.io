@@ -1,0 +1,39 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+#content{
+	position: fixed;
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	
+	left: 50%;
+	margin-left: -200px;
+	top: 50%;
+	margin-top: -100px;
+	overflow: hidden;
+	
+}
+
+#radius1{
+	width: 100px;
+	height: 100px;
+	background-color: #fc0;
+	border-radius: 50px;
+	position: relative;
+	top: -50px;
+	left: -50px;
+}
+#radius2{
+	width: 100px;
+	height: 100px;
+	background-color: #fc0;
+	border-radius: 50px;
+	float: right;
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
