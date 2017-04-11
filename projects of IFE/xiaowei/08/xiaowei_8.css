@@ -1,0 +1,23 @@
+div{
+	
+
+}
+#line1{
+	border: none;
+	background: #fff;
+}
+#line2{
+	border: none;
+		background: #fff;
+}
+#line3{
+	border: none;
+		background: #fff;
+}
+.box{
+	border: #999 1px solid;
+	background-color: #eee;
+	height: 50px;
+	box-sizing: border-box;
+	
+}
