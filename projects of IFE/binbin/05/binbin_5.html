@@ -107,7 +107,7 @@
     var firstChild = document.getElementById("queue").firstChild;
     var queue = document.getElementById("queue");
     if(firstChild){
-      alert(value[value.length]);
+      alert(value[value.length-1]);
       queue.removeChild(queue.lastChild);
       value.pop();
     }else{
