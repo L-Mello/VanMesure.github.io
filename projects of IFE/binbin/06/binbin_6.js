@@ -37,26 +37,26 @@ function getArr(){
 
 
 function matchStr(targetstr,str){
-	var a = 0, b = 0;
+	var a = 0, b = targetstr.indexOf(str[0]);
 	var matchNum = 0;
 	//var lastMatch = 0;//上次匹配成功的位置
-	if(str.length > targetstr.length){
+	if(targetstr.length - b < str.length ||
+		targetstr.length < str.length ||
+		str.length == 0){
 		return false;
 	}else{
 		for(a; a < str.length; a++){
-			for(b; b < targetstr.length; b++){
+			for(b ; b < targetstr.length; b++){
 				if(targetstr[b] == str[a]){
-					matchNum++;
 					b++;
 					break;
+				}else{
+					return false;
 				}
 			}
 		}
-		if(matchNum == str.length){
-			return true;
-		}else{
-			return false;
-		}
+		return true;
+
 	}
 	
 }
