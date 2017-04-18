@@ -48,7 +48,7 @@ function changeColor(targetNodeId){
 			clearInterval(time);
 		}
 		
-	},100);
+	},500);
 }
 
 
