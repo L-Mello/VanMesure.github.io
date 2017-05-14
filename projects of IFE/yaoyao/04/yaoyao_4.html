@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yaoyoa4</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	#contentBox{
+		border: 1px solid #000;
+		overflow: hidden;
+		display: inline-block;
+	}
+	.row{
+		clear: both;
+	}
+	.box{
+		width: 40px;
+		height: 40px;
+		float: left;
+		border: 1px solid #aaa;
+	}
+
+	.activeTop{
+		width: 100%;
+		height: 100%;
+		
+	}
+	.activeDown{
+		width: 100%;
+		height: 100%;
+		
+	}
+	.activeLeft{
+		width: 100%;
+		height: 100%;
+		
+	}
+	.activeRight{
+		width: 100%;
+		height: 100%;
+		
+	}
+	.activeTop .head{
+		background-color: red;
+		height: 20%;
+		width: 100%;
+	}
+	.activeTop .tail{
+		background-color: blue;
+		height: 80%;
+		width: 100%;
+	}
+	.activeDown .head{
+		background-color: red;
+		height: 80%;
+		width: 100%;
+	}
+	.activeDown .tail{
+		background-color: blue;
+		height: 20%;
+		width: 100%;
+	}
+
+	.activeLeft .head{
+		background-color: red;
+		height: 100%;
+		width: 20%;
+		float: left;
+	}
+	.activeLeft .tail{
+		background-color: blue;
+		height: 100%;
+		width: 80%;
+		float: left;
+	}
+
+	.activeRight .head{
+		background-color: red;
+		height: 100%;
+		width: 20%;
+		float: right;
+	}
+	.activeRight .tail{
+		background-color: blue;
+		height: 100%;
+		width: 80%;
+		float: right;
+	}
+	
+	
+</style>
+<body>
+	<div id="contentBox">
+		<div id="0" class="row">
+			<div class="box">
+				<div class="activeTop">
+					<div class="head"></div>
+					<div class="tail"></div>
+				</div>
+			</div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="1" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="2" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="3" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="4" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="5" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="6" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="7" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="8" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<div id="9" class="row">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+
+
+	</div>
+	<div id="contr">
+		<input type="input" name="input" id="cmd">
+		<button id="run">执行</button>
+		<p>命令：</p>
+		<ul>
+			<li>GO      --向前移动一格</li>
+			<li>TUN LEF --向左转</li>
+			<li>TUN RIG --向右转</li>
+			<li>TUN BAC --向后转</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="yaoyao_4.js"></script>
+</body>
+</html>
