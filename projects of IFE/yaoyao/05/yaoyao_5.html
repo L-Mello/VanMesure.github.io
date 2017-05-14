@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>yaoyoa4</title>
+	<title>yaoyoa5</title>
 	<meta charset="utf-8">
 </head>
 <style type="text/css">
@@ -9,6 +9,7 @@
 		border: 1px solid #000;
 		overflow: hidden;
 		display: inline-block;
+		position: relative;
 	}
 	.row{
 		clear: both;
@@ -27,7 +28,7 @@
 		top: 0;
 		width: 40px;
 		height: 40px;
-
+		transition: 1s;
 	}
 	.activeBox .head{
 		width: 100%;
@@ -167,8 +168,6 @@
 			<div class="box"></div>
 			<div class="box"></div>
 		</div>
-
-
 	</div>
 	<div id="contr">
 		<input type="input" name="input" id="cmd">
@@ -179,8 +178,16 @@
 			<li>TUN LEF --向左转</li>
 			<li>TUN RIG --向右转</li>
 			<li>TUN BAC --向后转</li>
+			<li>TRA LEF：向屏幕的左侧移动一格，方向不变</li>
+			<li>TRA TOP：向屏幕的上面移动一格，方向不变</li>
+			<li>TRA RIG：向屏幕的右侧移动一格，方向不变</li>
+			<li>TRA BOT：向屏幕的下面移动一格，方向不变</li>
+			<li>MOV LEF：方向转向屏幕左侧，并向屏幕的左侧移动一格</li>
+			<li>MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格</li>
+			<li>MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格</li>
+			<li>MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格</li>
 		</ul>
 	</div>
-	<script type="text/javascript" src="yaoyao_4.js"></script>
+	<script type="text/javascript" src="yaoyao_5.js"></script>
 </body>
 </html>

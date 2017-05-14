@@ -1,65 +1,77 @@
-/*
-var rowObj = function(id){
-	this.rowId = id;
-	this.colState = [];
-	this.init = function(){
-		var childNodes = document.getElementById(id).childNodes;
-		for(var i = 0; i < childNodes.length; i++){
-			this.colState[i].push(childNodes[i]);
-			this.colState[i].push(0);
+
+var activeBox = {
+	top:0,
+	left:0,
+	directDeg: 0,
+	getRotate: function(){
+		return "rotate(" + this.directDeg + "deg)";
+	},
+	changeDirect: function(direct){
+		switch(direct){
+			case "left": this.directDeg += 270; break;
+			case "right": this.directDeg += 90; break;
+			case "back": this.directDeg +=180;
 		}
-	};
-	this.init();
-}
-function getActiveBox(direct){
-	var activeBox = document.createElement("div");
-	var activeBoxHead = document.createElement("div");
-	var activeBoxTail = document.createElement("div");
-	switch(direct){
-		case "up": activeBox.class = "activeTop";break;
-		case "down": activeBox.calss = "activeDown";break;
-		case "left": activeBox.class = "activeLeft";break;
-		case "right": activeBox.calss = "activeRight";break;
-		default: return;
+		if(this.directDeg >= 360){
+			this.directDeg -= 360;
+		}
+	},
+	move: function(direct){
+		direct = this.directDeg / 90;
+		switch(direct){
+			case 0:
+				if(this.top == 0) return;
+				this.top -= 40;
+				break;
+			case 1:
+				if(this.left == 400) return;
+				this.left += 40;
+				break;
+			case 2:
+				if(this.top == 400) return;
+				this.top += 40;
+				break;
+			case 3:
+				if(this.left == 0) return;
+				this.left -= 40; 
+		}
 	}
-	activeBoxHead.class = "head";
-	activeBoxTail.class = "tail";
-	activeBox.appendChild(activeBoxHead);
-	activeBox.appendChild(activeBoxTail);
-	return activeBox;
+};
+
+function drawBox(){
+	var boxGraph = document.getElementById("activeBox");
+	boxGraph.style.top = box.top + "px";
+	boxGraph.style.left = box.left + "px";
+	boxGraph.style.transform = box.getRotate();
 }
 
-function buttonEvent(){
+function identifyCmd(){
 	var cmd = document.getElementById("cmd").value;
-	var activeBox;
 	switch(cmd){
-		case "TUN LFT":
-			rowArr[nowPosition.r].colState[nowPosition.c].children[0].class = "activeLeft";
+		case "GO": 
+			box.move();
+			drawBox();
+			break;
+		case "TUN LEF":
+			box.changeDirect("left");
+			drawBox();
+			break;
+		case "TUN RIG":
+			box.changeDirect("right");
+			drawBox();
+			break;
+		case "TUN BAC":
+			box.changeDirect("back");
+			drawBox();
+			break;
 	}
-	
 }
 
-var rowArr = [];
-var nowPosition = {
-	r:0,
-	c:0,
-	direct:"up"
-};
-function init(){
-	for(var i = 0; i < 10; i++){
-		rowArr.push(new rowObj(i));
-	}
-	document.getElementById("run").addEventListener("click",buttonEvent);
+var box = activeBox;
+document.getElementById("run").addEventListener("click",identifyCmd);
 
-	 
-}
-init();
-*/
-var nowPosition = {
-	r:0,
-	c:0,
-	direct:"up"
-};
+
+/*
 function getBox(r,c){
 	var row = document.getElementById(r);
 	var box = row.children[c];
@@ -124,32 +136,8 @@ function go(){
 			break;
 	}
 }
-function identifyCmd(){
-	var cmd = document.getElementById("cmd").value;
-	switch(cmd){
-		case "GO": 
-			go();
-			break;
-		case "TUN LEF":
-			if(nowPosition.direct == "up")		{ changeDirect("left"); return;}
-			if(nowPosition.direct == "down")	{ changeDirect("right"); return;}
-			if(nowPosition.direct == "left")	{ changeDirect("down"); return;}
-			if(nowPosition.direct == "right")	{ changeDirect("up"); return;}
-			break;
-		case "TUN RIG":
-			if(nowPosition.direct == "up")		{ changeDirect("right"); return;}
-			if(nowPosition.direct == "down")	{ changeDirect("left"); return;}
-			if(nowPosition.direct == "left")	{ changeDirect("up"); return;}
-			if(nowPosition.direct == "right")	{ changeDirect("down"); return;}
-			break;
-		case "TUN BAC":
-			if(nowPosition.direct == "up")		{ changeDirect("down"); return;}
-			if(nowPosition.direct == "down")	{ changeDirect("up"); return;}
-			if(nowPosition.direct == "left")	{ changeDirect("right"); return;}
-			if(nowPosition.direct == "right")	{ changeDirect("left"); return;}
-	}
-}
+
 document.getElementById("run").addEventListener("click",identifyCmd);
 
 
-		
+		*/
